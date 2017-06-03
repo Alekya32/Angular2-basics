@@ -1,0 +1,19 @@
+<div class="container" *ngIf="showHeader">
+	I am Sample {{name}}....
+	<br>
+	<img [src]="imageUrl"/>
+	<br><br>
+	<img bind-src="imageUrl"/>
+	<br><br>
+	<input type="text" (keydown.enter)="send($event)" [(ngModel)]="myName"/>{{myName|lowercase}}
+	<br><br>
+	KeyUp:<input type="text" (keyup.enter)="send1($event)"/>
+
+	<br><br>
+	<ul *ngFor=" let item of items">
+		<li>{{item}}</li>
+	</ul>
+	<br>
+	Display Price:{{price|currency:'GSD':'true'}}
+	<button class="btn btn-primary" (click)="runMe()">Click This..</button>
+	</div>
